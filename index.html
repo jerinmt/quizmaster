@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Knowledge Quiz for Kids</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="quiz-card" id="quizCard" aria-live="polite">
+      <div class="quiz-header">
+        <h1>General Knowledge Quiz</h1>
+        <p class="subtitle">Bright questions for curious kids!</p>
+      </div>
+
+      <div class="progress-bar">
+        <span id="progressText">Question 1 of 5</span>
+      </div>
+
+      <div class="question-area" id="questionArea">
+        <div class="question-row">
+          <p class="question-sentence" id="questionSentence"></p>
+          <div class="input-dropdown">
+            <input
+              type="text"
+              id="answerInput"
+              class="answer-input"
+              readonly
+              placeholder="Tap for options"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            />
+            <div id="optionsPanel" class="options-panel hidden" role="listbox" aria-label="Answer options"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback-row" id="feedbackRow">
+        <p class="feedback-text" id="feedbackText"></p>
+      </div>
+    </section>
+
+    <section class="result-card hidden" id="resultCard" aria-live="polite">
+      <div class="result-badge">🎉</div>
+      <h2 id="finalMessage">Great job!</h2>
+      <p id="scoreText">You answered 0 out of 5 questions.</p>
+      <div class="review-card">
+        <p class="review-heading">Here are the questions and the right answers:</p>
+        <ul id="reviewList" class="review-list"></ul>
+      </div>
+      <button id="playAgainButton" class="primary-button">Play Again</button>
+    </section>
+  </main>
+
+  <div class="confetti-container" id="confettiContainer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
